@@ -1,0 +1,79 @@
+fileFormatVersion: 2
+guid: a49acdcddd7259a45937572d56142f5e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - LevelV2.2-Start-0
+  - LevelV2.2-ExitDoor-1
+  - LevelV2.2-ExitDoor-2
+  - LevelV2.2-ExitDoor-3
+  - LevelV2.2-Bandits-4
+  - LevelV2.2-Bandits-5
+  - LevelV2.2-Bandits-6
+  - LevelV2.2-Bandits-7
+  - LevelV2.2-Bandits-8
+  - LevelV2.2-IllusionaryGuards-9
+  - LevelV2.2-IllusionaryGuards-10
+  - LevelV2.2-IllusionaryGuards-11
+  - LevelV2.2-IllusionaryGuards-12
+  - LevelV2.2-TrappedDoor-13
+  - LevelV2.2-TrappedDoor-14
+  - LevelV2.2-TrappedDoor-15
+  - LevelV2.2-TrappedDoor-16
+  - LevelV2.2-TrappedDoor-17
+  - LevelV2.2-TrappedDoor-18
+  - LevelV2.2-TrappedDoor-19
+  - LevelV2.2-TrappedDoor-20
+  - LevelV2.2-TrappedDoor-21
+  - LevelV2.2-TrappedDoor-22
+  - LevelV2.2-TrappedDoor-23
+  - LevelV2.2-PuzzleDoor-24
+  - LevelV2.2-PuzzleDoor-25
+  - LevelV2.2-PuzzleDoor-26
+  - LevelV2.2-PuzzleDoor-27
+  - LevelV2.2-PuzzleDoor-28
+  - LevelV2.2-PuzzleDoor-29
+  - LevelV2.2-PuzzleDoor-30
+  - LevelV2.2-PuzzleDoor-31
+  - LevelV2.2-WeakDoor-32
+  - LevelV2.2-WeakDoor-33
+  - LevelV2.2-WeakDoor-34
+  - LevelV2.2-WeakDoor-35
+  - LevelV2.2-WeakDoor-36
+  - LevelV2.2-WeakDoor-37
+  - LevelV2.2-LanguageBarrier-38
+  - LevelV2.2-LanguageBarrier-39
+  - LevelV2.2-LanguageBarrier-40
+  - LevelV2.2-LanguageBarrier-41
+  - LevelV2.2-LanguageBarrier-42
+  - LevelV2.2-LanguageBarrier-43
+  - LevelV2.2-LanguageBarrier-44
+  - LevelV2.2-LanguageBarrier-45
+  - LevelV2.2-WinDoor-46
+  - LevelV2.2-WinDoor-47
+  - LevelV2.2-WinDoor-48
+  - LevelV2.2-LichKing-49
+  - LevelV2.2-LichKing-50
+  - LevelV2.2-LichKing-51
+  - LevelV2.2-LichKing-52
+  - LevelV2.2-TwoKeyDoor-53
+  - LevelV2.2-TwoKeyDoor-54
+  - LevelV2.2-TwoKeyDoor-55
+  - LevelV2.2-TwoKeyDoor-56
+  - LevelV2.2-TwoKeyDoor-57
+  - LevelV2.2-TwoKeyDoor-58
+  - LevelV2.2-TwoKeyDoor-59
+  - LevelV2.2-TwoKeyDoor-60
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: a49acdcddd7259a45937572d56142f5e,
+    type: 3}
+  localizations: []

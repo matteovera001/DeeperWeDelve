@@ -1,0 +1,161 @@
+title: ExitDoor
+tags: 
+colorID: 0
+position: 230,226
+---
+Would you like to return to the surface?
+->Yes
+    << ReturnSurface>>
+->No
+===
+title: Bandits
+tags: 
+colorID: 0
+position: 3,-3
+---
+A group of bandits stand with blades drawn.
+Bandit: Your money or your life!
+
+-> (Intimidation Cha 14+)Surrender and I will let you live! <<if $Charisma >= 14>>
+    Bandit:On second thought, we have no quarrel with you.
+-> *Attack*
+    << Aggro>> 
+===
+title: IllusionaryGuards
+tags: 
+colorID: 0
+position: 221,-5
+---
+Fearsome monsters made of swirling shadow stand before you.
+
+-> (Perception Wis16+)*See through the illusion.*<<if $Wisdom >= 16>>
+    Bravely stepping forward, {$Name} points out the sorcerous depection and the shadows fade as if exposed to daylight. 
+-> *Attack*
+    << Aggro>> 
+===
+title: TrappedDoor
+tags: 
+colorID: 0
+position: 591,-6
+---
+A stone door carved with ornate snakes.
+<<if $Wisdom < 15>>
+    -> *Open*
+        A stone snake comes alive and bites {$Name}.
+        << HurtPlayer>> 
+        << DestroyOb>> 
+    ->leave the door be.
+        <<stop>> 
+<<endif>>
+<<if $Wisdom > 14 or $SeenSnakeRoom == 1>>
+    << $SeenSnakeRoom = 1>> 
+    (Perception Wis 15+) Putting their hand out to stop the others, {$Name} points out the trap.
+    ->(Lockpicking Dex 14+) *Try to bypass the trap* <<if $Dextarity >= 14>> 
+        Something clicks and the door opens.
+        << DestroyOb>> 
+    ->(FAILED Lockpicking Dex 14+) *Try to bypass the trap.* <<if $Dextarity < 14>> 
+        A stone snake comes alive and bites {$Name}.
+        << HurtPlayer>>
+        << DestroyOb>> 
+    -> *Open door anyways.*
+        << HurtPlayer>>  
+        << DestroyOb>> 
+    ->*Leave the door be.* Maybe another person would be more suited to open it.
+        <<stop>> 
+<<endif>>
+===
+title: PuzzleDoor
+tags: 
+colorID: 0
+position: 816,-6
+---
+A wooden door glowing with a faint magical energy.
+
+-> (Athletics Str 18+)*Break down the door.*<<if $Strength >= 16>>
+    The door is naught but magical splinters.
+    <<DestroyOb>> 
+-> (SpellLore Int 16+)*Unravel the Esinmir Mindwrap.* <<if $Inteligence >= 16>>
+    The door shatters revealing what may be and what may not.
+    <<DestroyOb>> 
+-> (LockPicking Dex 13+)*Attempt to pick the lock.* <<if $Dextarity >= 13>>
+    A voice drills into {$Name}'s head reminding them of their many failures.
+    <<HurtPlayer>> 
+    <<Stop>> 
+-> *Leave door shut.*
+===
+title: WeakDoor
+tags: 
+colorID: 0
+position: 1039,-4
+---
+A rotting wooden door.
+
+-> (Athletics Str 12+)*Break down the door.* <<if $Strength >= 12>>
+    The door splinters.
+    <<DestroyOb>> 
+-> (LockPicking Dex 14+)*Attempt to pick the lock.* <<if $Dextarity >= 14>>
+    The door swings open.
+    <<DestroyOb>> 
+-> *Leave door shut.*
+===
+title: LanguageBarrier
+tags: 
+colorID: 0
+position: -225,-4
+---
+Reptilian creatures stand before you speaking in a guttural tongue.
+<<if $Inteligence < 15>>
+    -> *Attack*
+        << Aggro>> 
+<<endif>>
+
+<<if $Inteligence >= 15>>
+    (Languages Int 15+) Stepping forward, {$Name} translates. It seems these creatures thought you were here to eat their young.
+    ->(Diplomacy Cha 10+) Try to diffuse the situation <<if $Charisma >= 10>> 
+        They respond in their strange language, tilt their head down and do not attack.
+    ->(FAILED Diplomacy Cha 10+) Try to diffuse the situation <<if $Charisma < 10>> 
+        They respond in their strange language this time in an even deeper tone.
+        << Aggro>> 
+    -> *Attack*
+        << Aggro>> 
+<<endif>>
+
+===
+title: WinDoor
+tags: 
+colorID: 0
+position: 460,223
+---
+Congradulations on completing the game!
+->*Return to Surface*
+    << ReturnSurface>>
+->*Return to Dungeon*
+===
+title: LichKing
+tags: 
+colorID: 0
+position: -228,215
+---
+The fearsome Lich King stands before you.
+-> (Seduction Cha+18)Seduce the lich king. <<if $Charisma >= 18>>
+    The Lich King would not dare to destroy a body like {$Name}'s.
+-> *Attack*
+    << Aggro>> 
+===
+title: TwoKeyDoor
+tags: 
+colorID: 0
+position: -3,222
+---
+This door has a key hole.
+-> *Unlock door.* <<if $Keys >= 1>>
+    The door opens easily.
+    << DestroyOb>> 
+-> (Athletics Str 18+)*Break down the door.* <<if $Strength >= 18>>
+    The door splinters.
+    <<DestroyOb>> 
+-> (LockPicking Dex 17+)*Attempt to pick the lock.* <<if $Dextarity >= 17>>
+    The door swings open.
+    <<DestroyOb>> 
+-> *Leave door shut.*
+===
