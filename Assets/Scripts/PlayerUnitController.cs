@@ -22,6 +22,36 @@ public class PlayerUnitController : UnitController
         
     }
 
+    public override void Update()
+    {
+
+        //Need to change out with state machine functionality.
+        attackTimer += Time.deltaTime;
+        if (currentTarget != null)
+        {
+
+
+            navAgent.destination = currentTarget.position;
+            var distance = (this.transform.position - currentTarget.position).magnitude;
+            if (distance <= unitStats.attackRange)
+            {
+                if (currentTarget.tag == "EnemyUnit")
+                {
+                    Attack();
+                }
+                else
+                {
+                    DoAction();
+                }
+
+            }
+
+
+        }
+    }
+
+
+    //OLD
     public void GenerateStats(characterStats characterInput, Color col)
     {
         var renderer = GetComponent<Renderer>();
@@ -40,31 +70,7 @@ public class PlayerUnitController : UnitController
         
     }
 
-    public override void Update()
-    {
-        attackTimer += Time.deltaTime;
-        if (currentTarget != null)
-        {
-            
-
-            navAgent.destination = currentTarget.position;
-            var distance = (this.transform.position - currentTarget.position).magnitude;
-            if (distance <= unitStats.attackRange)
-            {
-                if (currentTarget.tag == "EnemyUnit")
-                {
-                    Attack();
-                }
-                else
-                {
-                    DoAction();
-                }
-                
-            }
-            
-
-        }
-    }
+    
 
     public void DoAction()
     {
