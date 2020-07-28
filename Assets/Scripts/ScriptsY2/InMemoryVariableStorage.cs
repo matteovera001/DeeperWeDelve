@@ -175,6 +175,11 @@ namespace Yarn.Unity {
         public void setCharValues(characterStats character)
         {
             //Debug.Log("SETCHARVALU"+character.name);
+
+
+            //OLD STUFF
+
+            /*
             variables["$Name"] = new Yarn.Value(character.name);
             variables["$Charisma"] = new Yarn.Value(character.charisma);
             variables["$Constitution"] = new Yarn.Value(character.constitution);
@@ -182,16 +187,10 @@ namespace Yarn.Unity {
             variables["$Inteligence"] = new Yarn.Value(character.inteligence);
             variables["$Strength"] = new Yarn.Value(character.strength);
             variables["$Wisdom"] = new Yarn.Value(character.wisdom);
-            //variables["$Name"] = new Yarn.Value(character.name);
-            /*character.name = randomline();
-            character.charisma = fourDSixDropLow();
-            character.constitution = fourDSixDropLow();
-            character.dextarity = fourDSixDropLow();
-            character.inteligence = fourDSixDropLow();
-            character.strength = fourDSixDropLow();
-            character.wisdom = fourDSixDropLow();
-            character.color = partyColors[party.Count];*/
-            //Line
+
+    */
+
+
         }
 
         public void addKey(string s)

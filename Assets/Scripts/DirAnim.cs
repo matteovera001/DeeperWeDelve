@@ -45,7 +45,7 @@ public class DirAnim : MonoBehaviour
 
         if (!(mag <= .1 && mag >= -.1))
         {
-            Debug.Log("MOVING " + mag);
+            //Debug.Log("MOVING " + mag);
             anim.enabled = true;
 
             
@@ -70,7 +70,7 @@ public class DirAnim : MonoBehaviour
         else
         {
             anim.enabled = false;
-            Debug.Log("Still");
+            //Debug.Log("Still");
             if ((headingAngle <= 45) || (headingAngle >= 315))
             {
                 spriteRend.sprite = downSprite;

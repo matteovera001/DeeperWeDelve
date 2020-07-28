@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitHitBackController : UnitController
 {
-    public bool agroed;
+    public bool aggroed;
 
     public override void Update()
     {
@@ -19,11 +19,11 @@ public class UnitHitBackController : UnitController
             {
                 Attack();
             }
-            agroed = true;
+            aggroed = true;
         }
-        else if (agroed)
+        else if (aggroed)
         {
-            
+            //This is bad cause it just attacks random players.
             currentTarget = FindObjectsOfType<PlayerUnitController>()[0].transform;
         }
     }

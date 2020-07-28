@@ -16,39 +16,30 @@ public class FaceNavMeshMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         transform.rotation = oldRot;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (/*!agent.isStopped*/true)
+        if (agent.remainingDistance != 0f)
         {
+            
+
             var targetPosition = agent.pathEndPosition;
             var targetPoint = new Vector3(targetPosition.x, transform.position.y, targetPosition.z);
             var _direction = (targetPoint - transform.position).normalized;
             var _lookRotation = Quaternion.LookRotation(_direction);
 
-            //OLD
-
-            //transform.rotation = Quaternion.RotateTowards(transform.rotation, _lookRotation, 360);
-
-            //New
+            
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, _lookRotation, 360);
             
 
-            Quaternion possibleRot = Quaternion.RotateTowards(transform.rotation, _lookRotation, 360); 
-            if (possibleRot.y==0)
-            {
-                transform.rotation = oldRot;
-            }
-            else
-            {
-                transform.rotation = possibleRot;
-            }
-
-            
-
-            oldRot = transform.rotation;
-            
         }
+
+
+
+
+        
     }
 }

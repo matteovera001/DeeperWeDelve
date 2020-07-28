@@ -31,6 +31,10 @@ public class UnitController : MonoBehaviour
 
     public virtual void Update()
     {
+        //Should switch to State machine behavior.
+
+
+
         attackTimer += Time.deltaTime;
         if (currentTarget!=null)
         {
