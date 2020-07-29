@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class CharacterGen : MonoBehaviour
 {
+    /*
     //public string path;
     public List<characterStats> party = new List<characterStats>();
     public List<Color> partyColors;
@@ -218,4 +219,5 @@ public class CharacterGen : MonoBehaviour
         }
         return stat;
     }
+    */
 }

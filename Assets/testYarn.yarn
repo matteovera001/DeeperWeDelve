@@ -1,0 +1,17 @@
+title: DialogueTest
+tags: 
+colorID: 0
+position: 547,362
+---
+Dialogue Test
+===
+title: CombatTest
+tags: 
+colorID: 0
+position: 789,363
+---
+Combat Test
+-> Don't Attack
+-> Attack
+    << Aggro>> 
+===
