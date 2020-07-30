@@ -38,8 +38,15 @@ public class characterUI : MonoBehaviour
 
     public void Death()
     {
+        //FROM OLD PROJECT NEEDS TO BE UPDATED FOR NEW ONE
+
+
+        /*
         CharacterGen cg = FindObjectOfType<CharacterGen>();
         cg.Portraits.Remove(this.gameObject);
+        */
+
+
         Destroy(this.gameObject);
     }
 

@@ -115,15 +115,22 @@ public class PlayerUnitController : UnitController
 
     public override void Die()
     {
+        Debug.Log("DO DEATH STUFF:");
+        Destroy(this.gameObject);
 
+        /*
         PlayerManager pm = FindObjectOfType<PlayerManager>();
         pm.selectedUnits.Remove(this);
         CharacterGen cg = FindObjectOfType<CharacterGen>();
+
+
         cg.party.Remove(character);
 
         Debug.Log("Party Members Left: " + cg.party.Count);
-        Destroy(this.gameObject);
+        
         myUI.Death();
+
+        */
         //Death stuff;
     }
 }

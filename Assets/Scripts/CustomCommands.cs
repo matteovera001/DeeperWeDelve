@@ -52,8 +52,11 @@ namespace Yarn.Unity
 
         private void ReturnSurface(string[] parameters)
         {
-            CharacterGen charGen = FindObjectOfType<CharacterGen>();
-            charGen.ReturnSurface();
+            //FROM OLD PROJECT SHOULD REMOVE
+
+
+            //CharacterGen charGen = FindObjectOfType<CharacterGen>();
+            //charGen.ReturnSurface();
         }
     }
 

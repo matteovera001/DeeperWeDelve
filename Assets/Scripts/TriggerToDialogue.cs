@@ -26,8 +26,14 @@ namespace Yarn.Unity
             if (pack.Count == 0 && !cleared)
             {
                 cleared = true;
+
+                /*
                 CharacterGen charGen = FindObjectOfType<CharacterGen>();
+
+
                 charGen.KillPack();
+
+    */
                 Debug.Log("cleared");
 
             }
@@ -42,8 +48,12 @@ namespace Yarn.Unity
             if (pack.Count == 0 && !cleared)
             {
                 cleared = true;
+
+                /*
                 CharacterGen charGen = FindObjectOfType<CharacterGen>();
                 charGen.KillPack();
+                
+                */
                 Debug.Log("cleared");
 
             }
